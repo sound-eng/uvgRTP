@@ -53,7 +53,8 @@ namespace uvgrtp {
              * \ingroup CORE_API
              * \brief Create a new RTP session between two IP addresses
              *
-             * \param addresses local and remote IP address for session
+             * \param local_address Local IP address for the session
+             * \param remote_address Remote IP address for the session
              *
              * \return RTP session object
              *

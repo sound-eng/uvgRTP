@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uvgRTP: uvgrtp::frame::rtcp_fb_fci Struct Reference</title>
+<title>uvgRTP: uvgrtp::frame::rtcp_rr Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">uvgRTP<span id="projectnumber">&#160;3.1.0</span>
+   <div id="projectname">uvgRTP<span id="projectnumber">&#160;4.0.0</span>
    </div>
    <div id="projectbrief">An open-source library for RTP/SRTP media delivery</div>
   </td>
@@ -84,87 +84,82 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>uvgrtp</b></li><li class="navelem"><b>frame</b></li><li class="navelem"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__fb__fci.html">rtcp_fb_fci</a></li>  </ul>
+<li class="navelem"><b>uvgrtp</b></li><li class="navelem"><b>frame</b></li><li class="navelem"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__rr.html">rtcp_rr</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structuvgrtp_1_1frame_1_1rtcp__fb__fci-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">uvgrtp::frame::rtcp_fb_fci Struct Reference</div></div>
+<a href="structuvgrtp_1_1frame_1_1rtcp__rr-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">uvgrtp::frame::rtcp_rr Struct Reference<div class="ingroups"><a class="el" href="group___c_o_r_e___a_p_i.html">Core API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>RTCP Feedback Control Information, See RFC 4585 section 6.1.  
+<p>See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.4.2" target="_blank">RFC 3550 section 6.4.2</a> for details on the RTCP RR (Receiver Report).  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="frame_8hh_source.html">frame.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aaacd4cadd349c7d30bd672dce311532b" id="r_aaacd4cadd349c7d30bd672dce311532b"><td class="memItemLeft" ><a id="aaacd4cadd349c7d30bd672dce311532b" name="aaacd4cadd349c7d30bd672dce311532b"></a>
-union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf80b2a9546c34c68fa4390796f8711a" id="r_aaf80b2a9546c34c68fa4390796f8711a"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structuvgrtp_1_1frame_1_1rtcp__fir.html">rtcp_fir</a>&#160;&#160;&#160;<a class="el" href="#ac5ffb17de694a0ee7b486997f81d4f60">fir</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:aaf80b2a9546c34c68fa4390796f8711a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a6a02f4a62f82c14d081713fad80973" id="r_a3a6a02f4a62f82c14d081713fad80973"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structuvgrtp_1_1frame_1_1rtcp__sli.html">rtcp_sli</a>&#160;&#160;&#160;<a class="el" href="#a8f6a36918a8b00456a4b6de964036f2c">sli</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a3a6a02f4a62f82c14d081713fad80973"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50784d086c054f5c1ae3b3c3ccc8f310" id="r_a50784d086c054f5c1ae3b3c3ccc8f310"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="structuvgrtp_1_1frame_1_1rtcp__rpsi.html">rtcp_rpsi</a>&#160;&#160;&#160;<a class="el" href="#a8329088f359927b7aa24a1cec34755af">rpsi</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a50784d086c054f5c1ae3b3c3ccc8f310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaacd4cadd349c7d30bd672dce311532b" id="r_aaacd4cadd349c7d30bd672dce311532b"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:aaacd4cadd349c7d30bd672dce311532b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca56371d43a71121fa64c8ce121c5a5" id="r_a6ca56371d43a71121fa64c8ce121c5a5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structuvgrtp_1_1frame_1_1rtcp__header.html">rtcp_header</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ca56371d43a71121fa64c8ce121c5a5">header</a></td></tr>
+<tr class="separator:a6ca56371d43a71121fa64c8ce121c5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6e390620332e9bcdcb2959e553a1f6" id="r_a9b6e390620332e9bcdcb2959e553a1f6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b6e390620332e9bcdcb2959e553a1f6">ssrc</a> = 0</td></tr>
+<tr class="separator:a9b6e390620332e9bcdcb2959e553a1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7c9ec42922c47c0dba0412e04b7526" id="r_aad7c9ec42922c47c0dba0412e04b7526"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__report__block.html">rtcp_report_block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad7c9ec42922c47c0dba0412e04b7526">report_blocks</a></td></tr>
+<tr class="separator:aad7c9ec42922c47c0dba0412e04b7526"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RTCP Feedback Control Information, See RFC 4585 section 6.1. </p>
+<div class="textblock"><p>See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.4.2" target="_blank">RFC 3550 section 6.4.2</a> for details on the RTCP RR (Receiver Report). </p>
 
-<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00196">196</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00184">184</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac5ffb17de694a0ee7b486997f81d4f60" name="ac5ffb17de694a0ee7b486997f81d4f60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5ffb17de694a0ee7b486997f81d4f60">&#9670;&#160;</a></span>fir</h2>
+<a id="a6ca56371d43a71121fa64c8ce121c5a5" name="a6ca56371d43a71121fa64c8ce121c5a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca56371d43a71121fa64c8ce121c5a5">&#9670;&#160;</a></span>header</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__fir.html">rtcp_fir</a> uvgrtp::frame::rtcp_fb_fci::fir</td>
+          <td class="memname">struct <a class="el" href="structuvgrtp_1_1frame_1_1rtcp__header.html">rtcp_header</a> uvgrtp::frame::rtcp_rr::header</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00199">199</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00185">185</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
 
 </div>
 </div>
-<a id="a8329088f359927b7aa24a1cec34755af" name="a8329088f359927b7aa24a1cec34755af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8329088f359927b7aa24a1cec34755af">&#9670;&#160;</a></span>rpsi</h2>
+<a id="aad7c9ec42922c47c0dba0412e04b7526" name="aad7c9ec42922c47c0dba0412e04b7526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7c9ec42922c47c0dba0412e04b7526">&#9670;&#160;</a></span>report_blocks</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__rpsi.html">rtcp_rpsi</a> uvgrtp::frame::rtcp_fb_fci::rpsi</td>
+          <td class="memname"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__report__block.html">rtcp_report_block</a>* uvgrtp::frame::rtcp_rr::report_blocks</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00201">201</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00187">187</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
 
 </div>
 </div>
-<a id="a8f6a36918a8b00456a4b6de964036f2c" name="a8f6a36918a8b00456a4b6de964036f2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f6a36918a8b00456a4b6de964036f2c">&#9670;&#160;</a></span>sli</h2>
+<a id="a9b6e390620332e9bcdcb2959e553a1f6" name="a9b6e390620332e9bcdcb2959e553a1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6e390620332e9bcdcb2959e553a1f6">&#9670;&#160;</a></span>ssrc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__sli.html">rtcp_sli</a> uvgrtp::frame::rtcp_fb_fci::sli</td>
+          <td class="memname">uint32_t uvgrtp::frame::rtcp_rr::ssrc = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00200">200</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00186">186</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
 
 </div>
 </div>

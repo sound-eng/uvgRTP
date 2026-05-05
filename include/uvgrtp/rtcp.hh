@@ -171,9 +171,32 @@ namespace uvgrtp {
             /// \retval RTP_OK on success
             rtp_error_t remove_all_hooks();
 
+            /**
+             * \brief Get sender report for given SSRC
+             * \param ssrc SSRC identifier to lookup
+             * \retval pointer to rtcp_sr if found, nullptr otherwise
+             */
             uvgrtp::frame::rtcp_sr* get_sr(uint32_t ssrc);
+
+            /**
+             * \brief Get receiver report for given SSRC
+             * \param ssrc SSRC identifier to lookup
+             * \retval pointer to rtcp_rr if found, nullptr otherwise
+             */
             uvgrtp::frame::rtcp_rr* get_rr(uint32_t ssrc);
+
+            /**
+             * \brief Get SDES packet for given SSRC
+             * \param ssrc SSRC identifier to lookup
+             * \retval pointer to rtcp_sdes if found, nullptr otherwise
+             */
             uvgrtp::frame::rtcp_sdes* get_sdes(uint32_t ssrc);
+
+            /**
+             * \brief Get APP packet for given SSRC
+             * \param ssrc SSRC identifier to lookup
+             * \retval pointer to rtcp_app_packet if found, nullptr otherwise
+             */
             uvgrtp::frame::rtcp_app_packet* get_app_packet(uint32_t ssrc);
 
 
@@ -246,7 +269,8 @@ namespace uvgrtp {
              *
              * \details ......
              *
-             * \param hook Function pointer to the hook
+             * \param rtt_handler Function to be called with (ssrc, remote_ssrc, rtt)
+             *                     where rtt is measured in seconds
              *
              * \retval RTP_OK on success
              * \retval RTP_INVALID_VALUE If hook is nullptr

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">uvgRTP<span id="projectnumber">&#160;3.1.0</span>
+   <div id="projectname">uvgRTP<span id="projectnumber">&#160;4.0.0</span>
    </div>
    <div id="projectbrief">An open-source library for RTP/SRTP media delivery</div>
   </td>
@@ -94,53 +94,36 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;winsock2.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;uvgrtp/export.hh&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/* Currently this class uses millisecond precision, but it should be updated to use microseconds.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * The RTP spec offers a microsecond precision in things like jiffies so we should offer it to users */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>uvgrtp {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">namespace </span>clock {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">/* network time protocol */</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">namespace </span>ntp {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            uint64_t now();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            uint64_t diff(uint64_t ntp1, uint64_t ntp2);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            uint64_t diff_now(uint64_t then);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="comment">/* high-resolution clock */</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">namespace </span>hrc {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keyword">typedef</span> std::chrono::high_resolution_clock::time_point hrc_t;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            hrc_t now();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="group___c_o_r_e___a_p_i.html#ga6606f88f8c335a6b5dff947ebbf81e04">   24</a></span>            UVGRTP_EXPORT uint64_t <a class="code hl_function" href="group___c_o_r_e___a_p_i.html#ga6606f88f8c335a6b5dff947ebbf81e04">now</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="group___c_o_r_e___a_p_i.html#gaa7decd603bb4f4fabf300b321e963e76">   37</a></span>            UVGRTP_EXPORT uint64_t <a class="code hl_function" href="group___c_o_r_e___a_p_i.html#gaa7decd603bb4f4fabf300b321e963e76">diff</a>(uint64_t ntp1, uint64_t ntp2);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group___c_o_r_e___a_p_i.html#ga270a640db8a54784ef3ad56929fb826b">   50</a></span>            UVGRTP_EXPORT uint64_t <a class="code hl_function" href="group___c_o_r_e___a_p_i.html#ga270a640db8a54784ef3ad56929fb826b">diff_now</a>(uint64_t then);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        UVGRTP_EXPORT uint64_t jiffies_to_ms(uint64_t jiffies);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="comment">/* the result is in milliseconds */</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            uint64_t diff(hrc_t hrc1, hrc_t hrc2);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="comment">/* the result is in milliseconds */</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            uint64_t diff_now(hrc_t then);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            uint64_t diff_now_us(hrc_t&amp; then);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        uint64_t ms_to_jiffies(uint64_t ms);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        uint64_t jiffies_to_ms(uint64_t jiffies);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">int</span> gettimeofday(<span class="keyword">struct</span> timeval *tp, <span class="keyword">struct</span> timezone *tzp);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">namespace </span>uvg_rtp = uvgrtp;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">namespace </span>uvg_rtp = uvgrtp;</div>
+<div class="ttc" id="agroup___c_o_r_e___a_p_i_html_ga270a640db8a54784ef3ad56929fb826b"><div class="ttname"><a href="group___c_o_r_e___a_p_i.html#ga270a640db8a54784ef3ad56929fb826b">uvgrtp::clock::ntp::diff_now</a></div><div class="ttdeci">UVGRTP_EXPORT uint64_t diff_now(uint64_t then)</div><div class="ttdoc">Calculate the time difference of two NTP times.</div></div>
+<div class="ttc" id="agroup___c_o_r_e___a_p_i_html_ga6606f88f8c335a6b5dff947ebbf81e04"><div class="ttname"><a href="group___c_o_r_e___a_p_i.html#ga6606f88f8c335a6b5dff947ebbf81e04">uvgrtp::clock::ntp::now</a></div><div class="ttdeci">UVGRTP_EXPORT uint64_t now()</div><div class="ttdoc">Get current time in NTP units.</div></div>
+<div class="ttc" id="agroup___c_o_r_e___a_p_i_html_gaa7decd603bb4f4fabf300b321e963e76"><div class="ttname"><a href="group___c_o_r_e___a_p_i.html#gaa7decd603bb4f4fabf300b321e963e76">uvgrtp::clock::ntp::diff</a></div><div class="ttdeci">UVGRTP_EXPORT uint64_t diff(uint64_t ntp1, uint64_t ntp2)</div><div class="ttdoc">Calculate the time difference of two NTP times.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

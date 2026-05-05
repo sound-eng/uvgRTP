@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uvgRTP: uvgrtp::frame::rtcp_rpsi Struct Reference</title>
+<title>uvgRTP: uvgrtp::frame::rtcp_sdes_ck Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">uvgRTP<span id="projectnumber">&#160;3.1.0</span>
+   <div id="projectname">uvgRTP<span id="projectnumber">&#160;4.0.0</span>
    </div>
    <div id="projectbrief">An open-source library for RTP/SRTP media delivery</div>
   </td>
@@ -84,82 +84,82 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>uvgrtp</b></li><li class="navelem"><b>frame</b></li><li class="navelem"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__rpsi.html">rtcp_rpsi</a></li>  </ul>
+<li class="navelem"><b>uvgrtp</b></li><li class="navelem"><b>frame</b></li><li class="navelem"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__sdes__ck.html">rtcp_sdes_ck</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structuvgrtp_1_1frame_1_1rtcp__rpsi-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">uvgrtp::frame::rtcp_rpsi Struct Reference</div></div>
+<a href="structuvgrtp_1_1frame_1_1rtcp__sdes__ck-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">uvgrtp::frame::rtcp_sdes_ck Struct Reference<div class="ingroups"><a class="el" href="group___c_o_r_e___a_p_i.html">Core API</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Reference Picture Selection Indication, See RFC 4585 section 6.3.3.  
+<p>See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.5" target="_blank">RFC 3550 section 6.5</a> for details on RTCP SDES Chunk.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="frame_8hh_source.html">frame.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a02799f72b511b81d1cbf1961f6fc6ef9" id="r_a02799f72b511b81d1cbf1961f6fc6ef9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02799f72b511b81d1cbf1961f6fc6ef9">pb</a> = 0</td></tr>
-<tr class="separator:a02799f72b511b81d1cbf1961f6fc6ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add9c3f8b8fa98846b516b1bdaf48b421" id="r_add9c3f8b8fa98846b516b1bdaf48b421"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add9c3f8b8fa98846b516b1bdaf48b421">pt</a> = 0</td></tr>
-<tr class="separator:add9c3f8b8fa98846b516b1bdaf48b421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a977a1a3b59e68a70ddfaa126920cd5c0" id="r_a977a1a3b59e68a70ddfaa126920cd5c0"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a977a1a3b59e68a70ddfaa126920cd5c0">str</a> = nullptr</td></tr>
-<tr class="separator:a977a1a3b59e68a70ddfaa126920cd5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ce51b539b71c65644c7fd8021bf48c" id="r_a05ce51b539b71c65644c7fd8021bf48c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05ce51b539b71c65644c7fd8021bf48c">ssrc</a> = 0</td></tr>
+<tr class="separator:a05ce51b539b71c65644c7fd8021bf48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03207dea0bd3b1c26f26a78f1a85ca76" id="r_a03207dea0bd3b1c26f26a78f1a85ca76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__sdes__item.html">rtcp_sdes_item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03207dea0bd3b1c26f26a78f1a85ca76">items</a> = nullptr</td></tr>
+<tr class="separator:a03207dea0bd3b1c26f26a78f1a85ca76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5183dcabfe7cd5c77efddde5921be40e" id="r_a5183dcabfe7cd5c77efddde5921be40e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5183dcabfe7cd5c77efddde5921be40e">item_count</a> = 0</td></tr>
+<tr class="separator:a5183dcabfe7cd5c77efddde5921be40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Reference Picture Selection Indication, See RFC 4585 section 6.3.3. </p>
+<div class="textblock"><p>See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.5" target="_blank">RFC 3550 section 6.5</a> for details on RTCP SDES Chunk. </p>
 
-<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00189">189</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00204">204</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a02799f72b511b81d1cbf1961f6fc6ef9" name="a02799f72b511b81d1cbf1961f6fc6ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02799f72b511b81d1cbf1961f6fc6ef9">&#9670;&#160;</a></span>pb</h2>
+<a id="a5183dcabfe7cd5c77efddde5921be40e" name="a5183dcabfe7cd5c77efddde5921be40e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5183dcabfe7cd5c77efddde5921be40e">&#9670;&#160;</a></span>item_count</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t uvgrtp::frame::rtcp_rpsi::pb = 0</td>
+          <td class="memname">size_t uvgrtp::frame::rtcp_sdes_ck::item_count = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00190">190</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00207">207</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
 
 </div>
 </div>
-<a id="add9c3f8b8fa98846b516b1bdaf48b421" name="add9c3f8b8fa98846b516b1bdaf48b421"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add9c3f8b8fa98846b516b1bdaf48b421">&#9670;&#160;</a></span>pt</h2>
+<a id="a03207dea0bd3b1c26f26a78f1a85ca76" name="a03207dea0bd3b1c26f26a78f1a85ca76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03207dea0bd3b1c26f26a78f1a85ca76">&#9670;&#160;</a></span>items</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t uvgrtp::frame::rtcp_rpsi::pt = 0</td>
+          <td class="memname"><a class="el" href="structuvgrtp_1_1frame_1_1rtcp__sdes__item.html">rtcp_sdes_item</a>* uvgrtp::frame::rtcp_sdes_ck::items = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00191">191</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00206">206</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
 
 </div>
 </div>
-<a id="a977a1a3b59e68a70ddfaa126920cd5c0" name="a977a1a3b59e68a70ddfaa126920cd5c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a977a1a3b59e68a70ddfaa126920cd5c0">&#9670;&#160;</a></span>str</h2>
+<a id="a05ce51b539b71c65644c7fd8021bf48c" name="a05ce51b539b71c65644c7fd8021bf48c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ce51b539b71c65644c7fd8021bf48c">&#9670;&#160;</a></span>ssrc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t* uvgrtp::frame::rtcp_rpsi::str = nullptr</td>
+          <td class="memname">uint32_t uvgrtp::frame::rtcp_sdes_ck::ssrc = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00192">192</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hh_source.html#l00205">205</a> of file <a class="el" href="frame_8hh_source.html">frame.hh</a>.</p>
 
 </div>
 </div>

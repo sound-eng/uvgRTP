@@ -179,8 +179,7 @@ namespace uvgrtp {
 
         /**
          * \ingroup CORE_API
-         * \brief See \ref RFC3550_Section_6_4_2 for details on the RTCP RR (Receiver Report).
-         * \see https://www.rfc-editor.org/rfc/rfc3550#section-6.4.2
+        * \brief See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.4.2" target="_blank">RFC 3550 section 6.4.2</a> for details on the RTCP RR (Receiver Report).
          */
         struct UVGRTP_EXPORT rtcp_rr {
             struct rtcp_header header;
@@ -190,8 +189,7 @@ namespace uvgrtp {
 
         /**
          * \ingroup CORE_API
-         * \brief See \ref RFC3550_Section_6_5 for details on RTCP SDES Item.
-         * \see https://www.rfc-editor.org/rfc/rfc3550#section-6.5
+         * \brief See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.5" target="_blank">RFC 3550 section 6.5</a> for details on RTCP SDES Item.
          */
         struct UVGRTP_EXPORT rtcp_sdes_item {
             uint8_t type = 0;
@@ -201,8 +199,7 @@ namespace uvgrtp {
 
         /**
          * \ingroup CORE_API
-         * \brief See \ref RFC3550_Section_6_5 for details on RTCP SDES Chunk.
-         * \see https://www.rfc-editor.org/rfc/rfc3550#section-6.5
+         * \brief See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.5" target="_blank">RFC 3550 section 6.5</a> for details on RTCP SDES Chunk.
          */
         struct UVGRTP_EXPORT rtcp_sdes_ck {
             uint32_t ssrc = 0;
@@ -213,8 +210,7 @@ namespace uvgrtp {
 
         /**
          * \ingroup CORE_API
-         * \brief See \ref RFC3550_Section_6_5 for details on RTCP SDES (Source Description).
-         * \see https://www.rfc-editor.org/rfc/rfc3550#section-6.5
+         * \brief See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.5" target="_blank">RFC 3550 section 6.5</a> for details on RTCP SDES (Source Description).
          */
         struct UVGRTP_EXPORT rtcp_sdes {
             struct rtcp_header header;
@@ -222,8 +218,7 @@ namespace uvgrtp {
         };
         /**
          * \ingroup CORE_API
-         * \brief See \ref RFC3550_Section_6_7 for details on RTCP Application Packet.
-         * \see https://www.rfc-editor.org/rfc/rfc3550#section-6.7
+         * \brief See <a href="https://www.rfc-editor.org/rfc/rfc3550#section-6.7" target="_blank">RFC 3550 section 6.7</a> for details on RTCP Application Packet.
          */
         struct UVGRTP_EXPORT rtcp_app_packet {
             struct rtcp_header header;
