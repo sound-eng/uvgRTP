@@ -62,12 +62,16 @@ namespace uvgrtp {
              * \param fmt        Format of the media stream. see ::RTP_FORMAT for more details
              * \param rce_flags  RTP context enable flags, see ::RTP_CTX_ENABLE_FLAGS for more details
              *
+             * If no explicit SSRC is provided during creation, the stream will be assigned a
+             * random non-zero SSRC internally. To set an explicit SSRC, call
+             * `configure_ctx(RCC_SSRC, value)` on the returned `uvgrtp::media_stream`.
+             *
              * \return RTP media stream object
              *
              * \retval uvgrtp::media_stream*  On success
              * \retval nullptr                On failure, see print and 
              */
-            uvgrtp::media_stream *create_stream(uint16_t src_port, uint16_t dst_port, rtp_format_t fmt, int rce_flags, uint32_t local_ssrc = 0);
+            uvgrtp::media_stream *create_stream(uint16_t src_port, uint16_t dst_port, rtp_format_t fmt, int rce_flags);
 
             /**
              * \brief Create a unidirectional media_stream for an RTP session
